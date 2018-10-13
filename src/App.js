@@ -29,8 +29,8 @@ class App extends Component {
         return {
           lat: venue.location.lat,
           lng: venue.location.lng,
-          isOpen: false,
-          isVisible: true
+          open: false,
+          showMarkers: true
         };
       });
 
