@@ -7,14 +7,14 @@ class Foursquare {
   }
 
   static authentication() {
-    const fsKeys = {
+    const apiKey = {
       client_id: "YXHLWLDBYKSGUSIOWO5FWJVTFRQW1OAOMAFWV4SNYLDX5UOW",
       client_secret: "CT5CNTHXA54TBPTHHR4GGTNATFYZZDIJD3LTSYP3CJO5GV0X",
-      v: "20181011"
+      v: "20181012"
     };
 
-    return Object.values(fsKeys)
-      .map(key => `${fsKeys}=${fsKeys[key]}`)
+    return Object.keys(apiKey)
+      .map(key => `${apiKey}=${apiKey[key]}`)
       .join("&");
   }
 
@@ -22,7 +22,7 @@ class Foursquare {
     if (!params) {
       return "";
     } else {
-      return Object.values(params)
+      return Object.keys(params)
         .map(key => `${key}=${params[key]}`)
         .join("&");
     }
