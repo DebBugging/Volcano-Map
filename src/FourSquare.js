@@ -47,7 +47,7 @@ class Foursquare {
     ).then(get => get.json());
   }
 }
-export default class SquareAPI {
+export default class FoursquareAPI {
   static search(params) {
     return Foursquare.getFetch(`/venues/search`, "GET", params);
   }
