@@ -6,7 +6,8 @@ import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
-  Marker
+  Marker,
+  InfoWindow
 } from "react-google-maps";
 
 /* Set the defualt position to Turrialba, Costa Rica. Use parseFloat on center so it reads as a number- (https://github.com/tomchentw/react-google-maps/issues/367) */
@@ -25,11 +26,15 @@ const MyMapComponent = withScriptjs(
       {props.markers &&
         props.markers
           .filter(marker => marker.showMarkers)
-          .map((marker,index) => (
+          .map((marker, index) => (
             <Marker
               key={index}
               position={{ lat: marker.lat, lng: marker.lng }}
-            />
+              onClick={() => props.handlerMarker(marker)}>
+              {marker.open && (<InfoWindow>
+                <p>Hi</p>
+              </InfoWindow>)}
+</Marker>
           ))}
     </GoogleMap>
   ))

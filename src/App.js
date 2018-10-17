@@ -4,7 +4,6 @@ import Map from "./components/Map";
 import FoursquareAPI from "./FourSquare";
 
 class App extends Component {
-
   // Set the state with the info for the map
   constructor() {
     super();
@@ -15,7 +14,13 @@ class App extends Component {
       zoom: 8
     };
   }
- 
+
+  //Get markers to show pop-up when clicked (InfoWindows)
+  handlerMarker = (marker) => {
+  marker.open = true;
+  this.setState({markers: Object.assign(this.state.markers,marker)});
+  };
+
   /* Use the Foursquare API (static method "search") and set the location to search for volcanoes in Costa Rica */
   componentDidMount() {
     FoursquareAPI.search({
@@ -42,7 +47,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Map {...this.state} />
+        <Map {...this.state}
+        handlerMarker={this.handlerMarker} />
       </div>
     );
   }
