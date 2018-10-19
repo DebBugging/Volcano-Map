@@ -17,13 +17,9 @@ class App extends Component {
 
   /* Get one marker at a time to show a pop-up when clicked (InfoWindows) */
   handlerMarker = marker => {
+    this.closeMarkers();
     marker.open = true;
     this.setState({ markers: Object.assign(this.state.markers, marker) });
-
-    //This is to prevent from opening more than one at a time.
-    if (marker.open === true) {
-      marker.open = false;
-    }
 
     //Get info from API
     const venue = this.state.venues.find(venue => venue.id === marker.id);
@@ -31,9 +27,17 @@ class App extends Component {
     FoursquareAPI.venueInfo(marker.id).then(show => {
       const oneVenue = Object.assign(venue, show.response.venue);
       this.setState({ venues: Object.assign(this.state.venues, oneVenue) });
-      console.log(oneVenue);
     });
   };
+
+  //Open one marker at a time
+  closeMarkers = () => {
+    const close = this.state.markers.map(marker => {
+marker.open = false;
+      return marker;
+    });
+    this.setState({ markers: Object.assign(this.state.markers, close) });
+    };
 
   /* Use the Foursquare API (static method "search") and set the location to search for volcanoes in Costa Rica */
   componentDidMount() {

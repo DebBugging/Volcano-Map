@@ -26,16 +26,25 @@ const MyMapComponent = withScriptjs(
       {props.markers &&
         props.markers
           .filter(marker => marker.showMarkers)
-          .map((marker, index) => (
+          .map((marker, index) => {
+            const venueDetails = props.venues.find(venue => venue.id === marker.id);
+            return (
             <Marker
               key={index}
               position={{ lat: marker.lat, lng: marker.lng }}
               onClick={() => props.handlerMarker(marker)}>
-              {marker.open && (<InfoWindow>
-                <p>Hi</p>
-              </InfoWindow>)}
-</Marker>
-          ))}
+              {marker.open && venueDetails.bestPhoto && (
+              <InfoWindow>
+                <React.Fragment>
+                  <img src ={`${venueDetails.bestPhoto.prefix}200x200${venueDetails.bestPhoto.suffix}`} alt={`${venueDetails.name}`}/>
+                <p>{venueDetails.name}</p>
+                </React.Fragment>
+              </InfoWindow>
+              )}
+            </Marker>
+            )
+          }
+          )}
     </GoogleMap>
   ))
 );
