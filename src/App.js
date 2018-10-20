@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import Map from "./components/Map";
 import FoursquareAPI from "./FourSquare";
 
