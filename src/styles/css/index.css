@@ -28,30 +28,35 @@
 
 /* This is for all the base or body styles */
 body {
-  background: #fcf9c2;
+  background: #4d1104;
   margin: 0;
   padding: 0;
   font-family: sans-serif; }
 
 .sidebar {
-  width: 25%; }
+  width: 25%;
+  color: #fcf9c2;
+  background: #4d1104; }
   .sidebar #search {
     width: 80%;
     height: 1.9rem;
     font-size: 1.2rem;
     padding: 10px;
     margin: 5%;
-    border: 1px solid #0c0404;
-    border-radius: 20%;
+    border-radius: 5px;
     background: #3c0b04;
-    color: #ffffff; }
+    color: #fcf9c2;
+    border: 1px solid #0c0404;
+    box-shadow: 1px 2px 1px #0c0404; }
   .sidebar .volcanoes {
-    width: 90%; }
+    width: 85%; }
     .sidebar .volcanoes .listing {
+      background: #3c0b04;
       align-content: center;
-      margin: 7% 15% 0 0;
+      margin: 7% 20% 0 0;
       padding: 1%;
       list-style: none;
       font-size: 1rem;
       border: 1px solid #0c0404;
-      box-shadow: 1px 2px 1px #0c0404; }
+      box-shadow: 1px 2px 1px #0c0404;
+      cursor: pointer; }
