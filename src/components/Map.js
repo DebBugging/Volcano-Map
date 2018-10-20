@@ -27,24 +27,32 @@ const MyMapComponent = withScriptjs(
         props.markers
           .filter(marker => marker.showMarkers)
           .map((marker, index) => {
-            const venueDetails = props.venues.find(venue => venue.id === marker.id);
+            const venueDetails = props.venues.find(
+              venue => venue.id === marker.id
+            );
             return (
-            <Marker
-              key={index}
-              position={{ lat: marker.lat, lng: marker.lng }}
-              onClick={() => props.handlerMarker(marker)}>
-              {marker.open && venueDetails.bestPhoto && (
-              <InfoWindow>
-                <React.Fragment>
-                  <img src ={`${venueDetails.bestPhoto.prefix}200x200${venueDetails.bestPhoto.suffix}`} alt={`${venueDetails.name}`}/>
-                <p>{venueDetails.name}</p>
-                </React.Fragment>
-              </InfoWindow>
-              )}
-            </Marker>
-            )
-          }
-          )}
+              <Marker
+                key={index}
+                position={{ lat: marker.lat, lng: marker.lng }}
+                onClick={() => props.handlerMarker(marker)}
+              >
+                {marker.open &&
+                  venueDetails.bestPhoto && (
+                    <InfoWindow>
+                      <React.Fragment>
+                        <img
+                          src={`${venueDetails.bestPhoto.prefix}100x100${
+                            venueDetails.bestPhoto.suffix
+                          }`}
+                          alt={`${venueDetails.name}`}
+                        />
+                        <p>{venueDetails.name}</p>
+                      </React.Fragment>
+                    </InfoWindow>
+                  )}
+              </Marker>
+            );
+          })}
     </GoogleMap>
   ))
 );
@@ -56,7 +64,7 @@ export default class Map extends Component {
         {...this.props}
         googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyC0241W7i7-doPIN2UdSTLIGpS7N35T0ws"
         loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `600px` }} />}
+        containerElement={<div style={{ height: `100%`, width: `75%` }} />}
         mapElement={<div style={{ height: `100%` }} />}
       />
     );
