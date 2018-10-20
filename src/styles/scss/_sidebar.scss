@@ -9,14 +9,20 @@
       border: 1px solid $border-color;
       border-radius: 20%;
       background: $secondary-color;
+      color: $font-color;
     }
 
-    .listing {
-      margin: 3% 10% 0 0;
-      padding: 1%;
-      list-style: none;
-      font-size: 1rem;
-      border: 1px solid $border-color;
-      box-shadow: 1px 2px 1px $border-color;
+    .volcanoes {
+      width: 90%;
+
+      .listing {
+        align-content: center;
+        margin: 7% 15% 0 0;
+        padding: 1%;
+        list-style: none;
+        font-size: 1rem;
+        border: 1px solid $border-color;
+        box-shadow: 1px 2px 1px $border-color;
+      }
     }
   }
