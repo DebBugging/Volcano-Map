@@ -4,7 +4,7 @@ export default class Listing extends Component {
     render() {
         return (
             <li className="listing">
-            Hello World
+            {this.props.name}
             </li>
         )
     }
