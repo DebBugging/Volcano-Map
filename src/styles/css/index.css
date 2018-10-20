@@ -28,7 +28,7 @@
 
 /* This is for all the base or body styles */
 body {
-  background: #ff0000;
+  background: #fcf9c2;
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -46,13 +46,13 @@ code {
     font-size: 1.2rem;
     padding: 10px;
     margin: 5%;
-    border: 1px solid #333;
+    border: 1px solid #0c0404;
     border-radius: 20%;
-    background: #f1bd8c; }
+    background: #3c0b04; }
   .sidebar .listing {
     margin: 3% 10% 0 0;
     padding: 1%;
     list-style: none;
     font-size: 1rem;
-    border: 1px solid #333;
-    box-shadow: 1px 2px 1px #333; }
+    border: 1px solid #0c0404;
+    box-shadow: 1px 2px 1px #0c0404; }
