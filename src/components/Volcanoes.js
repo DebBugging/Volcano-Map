@@ -6,7 +6,13 @@ export default class Volcanoes extends Component {
     return (
       <ol className="volcanoes">
         {this.props.venues &&
-          this.props.venues.map((venue, index) => <Listing key={index} {...venue} />)}
+          this.props.venues.map((venue, index) => (
+            <Listing
+              key={index}
+              {...venue}
+              clickListing={this.props.clickListing}
+            />
+          ))}
       </ol>
     );
   }

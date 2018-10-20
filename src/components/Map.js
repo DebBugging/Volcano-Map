@@ -34,7 +34,7 @@ const MyMapComponent = withScriptjs(
               <Marker
                 key={index}
                 position={{ lat: marker.lat, lng: marker.lng }}
-                onClick={() => props.handlerMarker(marker)}
+                onClick={() => props.clickMarker(marker)}
               >
                 {marker.open &&
                   venueDetails.bestPhoto && (
