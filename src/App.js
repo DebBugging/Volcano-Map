@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Map from "./components/Map";
 import FoursquareAPI from "./FourSquare";
+import Sidebar from "./components/Sidebar";
 
 class App extends Component {
   // Set the state with the info for the map
@@ -32,11 +33,11 @@ class App extends Component {
   //Open one marker at a time
   closeMarkers = () => {
     const close = this.state.markers.map(marker => {
-marker.open = false;
+      marker.open = false;
       return marker;
     });
     this.setState({ markers: Object.assign(this.state.markers, close) });
-    };
+  };
 
   /* Use the Foursquare API (static method "search") and set the location to search for volcanoes in Costa Rica */
   componentDidMount() {
@@ -65,6 +66,7 @@ marker.open = false;
   render() {
     return (
       <div className="App">
+        <Sidebar />
         <Map {...this.state} handlerMarker={this.handlerMarker} />
       </div>
     );
