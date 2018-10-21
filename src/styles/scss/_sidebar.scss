@@ -20,6 +20,8 @@
       width: 85%;
 
       .listing {
+        display: flex;
+        justify-content: space-between;
         background: $secondary-color; 
         align-content: center;
         margin: 7% 20% 0 0;
@@ -29,6 +31,10 @@
         border: 1px solid $border-color;
         box-shadow: 1px 2px 1px $border-color;
         cursor: pointer;
+
+        img {
+          align-self: center;
+        }
       }
     }
   }

@@ -51,6 +51,8 @@ body {
   .sidebar .volcanoes {
     width: 85%; }
     .sidebar .volcanoes .listing {
+      display: flex;
+      justify-content: space-between;
       background: #3c0b04;
       align-content: center;
       margin: 7% 20% 0 0;
@@ -60,3 +62,5 @@ body {
       border: 1px solid #0c0404;
       box-shadow: 1px 2px 1px #0c0404;
       cursor: pointer; }
+      .sidebar .volcanoes .listing img {
+        align-self: center; }
