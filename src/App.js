@@ -12,8 +12,8 @@ class App extends Component {
       markers: [],
       center: [],
       zoom: 8,
-      updateSuperState: obj => {
-        this.setState(obj);
+      updateSuper: change => {
+        this.setState(change);
       }
     };
   }
@@ -44,12 +44,12 @@ class App extends Component {
   };
 
   //Show info when clicked from sidebar
-  clickListing = (venue) => {
+  clickListing = venue => {
     //Get info from marker
     const marker = this.state.markers.find(marker => marker.id === venue.id);
     this.clickMarker(marker);
     console.log(venue);
-  }
+  };
 
   /* Use the Foursquare API (static method "search") and set the location to search for volcanoes in Costa Rica */
   componentDidMount() {

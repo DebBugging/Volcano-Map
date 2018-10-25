@@ -5,28 +5,40 @@ export default class Sidebar extends Component {
   constructor() {
     super();
     this.state = {
-      query: ""
+      query: "",
+      venues: []
     };
   }
 
-  searchVolcano = () => {};
+  //Hide anything that is not relevant to the search
+  filterSearch = () => {
+    if (this.state.query.trim() !== "") {
+      const volcanoes = this.props.venues.filter(venue =>
+        venue.name.toLowerCase().includes(this.state.query.toLowerCase())
+      );
+      return volcanoes;
+    }
+    return this.props.venues;
+  };
+
   //Use the search input to select the marker
   handleSearch = e => {
     this.setState({ query: e.target.value });
 
     const markers = this.props.venues.map(venue => {
-        const matching = venue.name
-            .toLowerCase()
-            .includes(e.target.value.toLowerCase());
-        const marker = this.props.markers.find(marker => marker.id === venue.id);
-        if (matching) {
-            marker.showMarkers = true;
-        } else {
-            marker.showMarkers = false;
-        }  
-        return marker;
+      const matching = venue.name
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+
+      const marker = this.props.markers.find(marker => marker.id === venue.id);
+      if (matching) {
+        marker.showMarkers = true;
+      } else {
+        marker.showMarkers = false;
+      }
+      return marker;
     });
-    this.props.updateSuperState({ markers });
+    this.props.updateSuper({ markers });
   };
 
   render() {
@@ -36,9 +48,13 @@ export default class Sidebar extends Component {
           type={"search"}
           id={"search"}
           placeholder={"Search Volcano"}
-          handleSearch={this.handleSearch}
+          onChange={this.handleSearch}
         />
-        <Volcanoes {...this.props} clickListing={this.props.clickListing} />
+        <Volcanoes
+          {...this.props}
+          filterSearch={this.filterSearch()}
+          clickListing={this.props.clickListing}
+        />
       </div>
     );
   }
