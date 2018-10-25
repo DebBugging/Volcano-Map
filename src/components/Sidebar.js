@@ -52,7 +52,7 @@ export default class Sidebar extends Component {
         />
         <Volcanoes
           {...this.props}
-          filterSearch={this.filterSearch()}
+          venues={this.filterSearch()}
           clickListing={this.props.clickListing}
         />
       </div>
