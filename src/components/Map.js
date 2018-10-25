@@ -1,5 +1,6 @@
 /* Taken from https://tomchentw.github.io/react-google-maps/#installation -Step 4 */
 
+/*Global google */
 import React, { Component } from "react";
 
 import {
@@ -15,6 +16,7 @@ import {
 const MyMapComponent = withScriptjs(
   withGoogleMap(props => (
     <GoogleMap
+      defaultAnimation={2}
       defaultZoom={8}
       zoom={props.zoom}
       defaultCenter={{ lat: 10.0272815, lng: -83.74887179999999 }}
@@ -26,7 +28,7 @@ const MyMapComponent = withScriptjs(
       {props.markers &&
         props.markers
           .filter(marker => marker.showMarkers)
-          .map((marker, index) => {
+          .map((marker, index, array) => {
             const venueDetails = props.venues.find(
               venue => venue.id === marker.id
             );
@@ -35,6 +37,7 @@ const MyMapComponent = withScriptjs(
                 key={index}
                 position={{ lat: marker.lat, lng: marker.lng }}
                 onClick={() => props.clickMarker(marker)}
+                animation={marker.open === true ? 1 : 2}
               >
                 {marker.open &&
                   venueDetails.bestPhoto && (
