@@ -12,6 +12,7 @@ class App extends Component {
       markers: [],
       center: [],
       zoom: 8,
+      //Update state once filtered when searching
       updateSuper: change => {
         this.setState(change);
       }

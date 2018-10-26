@@ -38,6 +38,7 @@ export default class Sidebar extends Component {
       }
       return marker;
     });
+    //Update state
     this.props.updateSuper({ markers });
   };
 
