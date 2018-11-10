@@ -6,26 +6,58 @@
   flex-flow: row nowrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gm-style .gm-style-iw {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  width: 100%;
+  color: $font-color;
+  background: $secondary-color; 
+  align-content: center;
+  margin: 7% 20% 0 0;
+  padding: 1%;
+  font-size: 1rem;
+  border: 1px solid $border-color;
+  box-shadow: 1px 2px 1px $border-color;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #e96d3c;
-}
+.sidebar {
+  width: 25%;
+  color: $font-color;
+  background: $primary-color;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  #search {
+    width: 80%;
+    height: 1.9rem;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin: 5%;
+    border-radius: 5px;
+    background: $secondary-color;
+    color: $font-color;
+    border: 1px solid $border-color;
+    box-shadow: 1px 2px 1px $border-color;
   }
-  to {
-    transform: rotate(360deg);
+
+  .volcanoes {
+    width: 85%;
+
+    .listing {
+      display: flex;
+      justify-content: space-between;
+      background: $secondary-color; 
+      align-content: center;
+      margin: 7% 20% 0 0;
+      padding: 1%;
+      list-style: none;
+      font-size: 1rem;
+      border: 1px solid $border-color;
+      box-shadow: 1px 2px 1px $border-color;
+      cursor: pointer;
+
+      img {
+        align-self: center;
+      }
+    }
   }
 }
