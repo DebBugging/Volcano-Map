@@ -44,8 +44,9 @@ export default class Sidebar extends Component {
 
   render() {
     return (
-      <div className="sidebar">
+      <div className="sidebar" aria-role="Sidebar">
         <input
+        aria-role="Text field"
           type={"search"}
           id={"search"}
           placeholder={"Search Volcano"}

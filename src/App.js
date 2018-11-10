@@ -11,7 +11,7 @@ class App extends Component {
       venues: [],
       markers: [],
       center: [],
-      zoom: 8,
+      zoom: 11,
       //Update state once filtered when searching
       updateSuper: change => {
         this.setState(change);
@@ -57,7 +57,7 @@ class App extends Component {
     FoursquareAPI.search({
       near: "Costa Rica",
       query: "volcan",
-      limit: 10
+      limit: 6
     }).then(show => {
       const { venues } = show.response;
       const { center } = show.response.geocode.feature.geometry;
@@ -78,7 +78,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" aria-role="Application">
         <Sidebar {...this.state} clickListing={this.clickListing} />
         <Map {...this.state} clickMarker={this.clickMarker} />
       </div>

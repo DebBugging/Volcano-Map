@@ -1,4 +1,4 @@
-/* Taken from https://tomchentw.github.io/react-google-maps/#installation -Step 4 */
+/* This is from react-google-maps. A library for wrapping the Google Maps JavaScript API in react components. Taken from https://tomchentw.github.io/react-google-maps/#installation -Step 4 */
 
 /*Global google */
 import React, { Component } from "react";
@@ -17,7 +17,7 @@ const MyMapComponent = withScriptjs(
   withGoogleMap(props => (
     <GoogleMap
       defaultAnimation={2}
-      defaultZoom={8}
+      defaultZoom={11}
       zoom={props.zoom}
       defaultCenter={{ lat: 10.0272815, lng: -83.74887179999999 }}
       center={{
@@ -42,12 +42,12 @@ const MyMapComponent = withScriptjs(
                 {marker.open &&
                   venueDetails.bestPhoto && (
                     <InfoWindow>
-                      <React.Fragment>
+                      <React.Fragment className="infowindow">
                         <img
                           src={`${venueDetails.bestPhoto.prefix}100x100${
                             venueDetails.bestPhoto.suffix
                           }`}
-                          alt={`${venueDetails.name}`}
+                          alt={`A view of ${venueDetails.name}`}
                         />
                         <p>{venueDetails.name}</p>
                       </React.Fragment>

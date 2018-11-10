@@ -7,6 +7,7 @@ class Foursquare {
   static baseURL() {
     return "https://api.foursquare.com/v2";
   }
+  //Get all keys and IDs for authentication
   static authentic() {
     const fsKeys = {
       client_id: "YXHLWLDBYKSGUSIOWO5FWJVTFRQW1OAOMAFWV4SNYLDX5UOW",
@@ -47,6 +48,7 @@ class Foursquare {
     ).then(get => get.json());
   }
 }
+//Fetch all the data for searching from foursquare
 export default class FoursquareAPI {
   static search(params) {
     return Foursquare.getFetch(`/venues/search`, "GET", params);
