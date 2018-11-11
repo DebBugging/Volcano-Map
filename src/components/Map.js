@@ -39,20 +39,19 @@ const MyMapComponent = withScriptjs(
                 onClick={() => props.clickMarker(marker)}
                 animation={marker.open === true ? 1 : 2}
               >
-                {marker.open &&
-                  venueDetails.bestPhoto && (
-                    <InfoWindow>
-                      <React.Fragment className="infowindow">
-                        <img
-                          src={`${venueDetails.bestPhoto.prefix}100x100${
-                            venueDetails.bestPhoto.suffix
-                          }`}
-                          alt={`A view of ${venueDetails.name}`}
-                        />
-                        <p>{venueDetails.name}</p>
-                      </React.Fragment>
-                    </InfoWindow>
-                  )}
+                {marker.open && venueDetails.bestPhoto && (
+                  <InfoWindow>
+                    <React.Fragment className="infowindow">
+                      <img
+                        src={`${venueDetails.bestPhoto.prefix}100x100${
+                          venueDetails.bestPhoto.suffix
+                        }`}
+                        alt={`A view of ${venueDetails.name}`}
+                      />
+                      <p>{venueDetails.name}</p>
+                    </React.Fragment>
+                  </InfoWindow>
+                )}
               </Marker>
             );
           })}

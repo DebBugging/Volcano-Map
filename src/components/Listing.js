@@ -3,7 +3,9 @@ import React, { Component } from "react";
 export default class Listing extends Component {
   render() {
     return (
-      <li aria-label="Filtered place" role="menuitem"
+      <li
+        aria-label="Filtered place"
+        role="menuitem"
         className="listing"
         onClick={() => this.props.clickListing(this.props)}
       >
@@ -13,8 +15,7 @@ export default class Listing extends Component {
           src={`${this.props.categories[0].icon.prefix}30${
             this.props.categories[0].icon.suffix
           }`}
-          alt={`${this.props.categories[0].name
-          } Icon`}
+          alt={`${this.props.categories[0].name} Icon`}
         />
       </li>
     );

@@ -13,7 +13,7 @@ header {
 
 @media only screen and (max-width: 600px) {
   header {
-    font-size: .8rem;
+    font-size: 0.8rem;
     padding: 5%; } }
 
 /* This is for all the base or body styles */

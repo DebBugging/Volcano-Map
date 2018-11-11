@@ -45,9 +45,11 @@ export default class Sidebar extends Component {
   render() {
     return (
       <div className="sidebar" aria-label="Search sidebar" role="directory">
-      <header role="banner"><h1>Volcanoes of Central Costa Rica</h1></header>
+        <header role="banner">
+          <h1>Volcanoes of Central Costa Rica</h1>
+        </header>
         <input
-        aria-label="search text field"
+          aria-label="search text field"
           type={"search"}
           id={"search"}
           placeholder={"Search"}
