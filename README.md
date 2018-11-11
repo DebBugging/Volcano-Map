@@ -10,7 +10,7 @@ The Udacity [rubric](https://review.udacity.com/#!/rubrics/1351/view) has a list
 
 ## Instructions
 
-To visit website: volcanomap.surge.sh
+To visit website: http://volcanomap.surge.sh/
 
 Or to use locally:
 
