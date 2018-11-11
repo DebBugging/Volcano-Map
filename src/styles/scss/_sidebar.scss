@@ -3,6 +3,10 @@
   color: $font-color;
   background: $primary-color;
 
+  @media only screen and (max-width: 871px) {
+    width: 40%;
+  }
+
   #search {
     width: 80%;
     height: 1.9rem;
@@ -14,26 +18,44 @@
     color: $font-color;
     border: 1px solid $border-color;
     box-shadow: 1px 2px 1px $border-color;
+
+    @media only screen and (max-width: 871px) {
+      width: 90%;
+      height: 2rem;
+    }
   }
 
   .volcanoes {
-    width: 85%;
+    width: 100%;
+    margin: 0 auto;
 
     .listing {
       display: flex;
       justify-content: space-between;
       background: $secondary-color;
       align-content: center;
-      margin: 7% 20% 0 0;
+      margin: 7% 30% 0 0;
       padding: 1%;
       list-style: none;
-      font-size: 1rem;
+      font-size: 1.2rem;
       border: 1px solid $border-color;
       box-shadow: 1px 2px 1px $border-color;
       cursor: pointer;
 
+      @media only screen and (max-width: 582px) {
+        width: 150px;
+        position: relative;
+        right: 30px;
+        top: 5px;
+        font-size: 1rem;
+      }
+
       img {
         align-self: center;
+
+        @media only screen and (max-width: 400px) {
+          visibility: hidden;
+        }
       }
     }
   }

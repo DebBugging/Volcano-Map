@@ -18,6 +18,9 @@ body {
   width: 25%;
   color: #fcf9c2;
   background: #4d1104; }
+  @media only screen and (max-width: 871px) {
+    .sidebar {
+      width: 40%; } }
   .sidebar #search {
     width: 80%;
     height: 1.9rem;
@@ -29,22 +32,37 @@ body {
     color: #fcf9c2;
     border: 1px solid #0c0404;
     box-shadow: 1px 2px 1px #0c0404; }
+    @media only screen and (max-width: 871px) {
+      .sidebar #search {
+        width: 90%;
+        height: 2rem; } }
   .sidebar .volcanoes {
-    width: 85%; }
+    width: 100%;
+    margin: 0 auto; }
     .sidebar .volcanoes .listing {
       display: flex;
       justify-content: space-between;
       background: #3c0b04;
       align-content: center;
-      margin: 7% 20% 0 0;
+      margin: 7% 30% 0 0;
       padding: 1%;
       list-style: none;
-      font-size: 1rem;
+      font-size: 1.2rem;
       border: 1px solid #0c0404;
       box-shadow: 1px 2px 1px #0c0404;
       cursor: pointer; }
+      @media only screen and (max-width: 582px) {
+        .sidebar .volcanoes .listing {
+          width: 150px;
+          position: relative;
+          right: 30px;
+          top: 5px;
+          font-size: 1rem; } }
       .sidebar .volcanoes .listing img {
         align-self: center; }
+        @media only screen and (max-width: 400px) {
+          .sidebar .volcanoes .listing img {
+            visibility: hidden; } }
 
 .gm-style-iw {
   display: flex;
