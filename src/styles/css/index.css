@@ -7,6 +7,15 @@
   display: flex;
   flex-flow: row nowrap; }
 
+header {
+  font-size: 1.2rem;
+  padding: 2% 2% 0; }
+
+@media only screen and (max-width: 600px) {
+  header {
+    font-size: .8rem;
+    padding: 5%; } }
+
 /* This is for all the base or body styles */
 body {
   background: #4d1104;
