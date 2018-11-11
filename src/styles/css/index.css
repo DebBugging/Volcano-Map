@@ -20,12 +20,6 @@
 .App-link {
   color: #e96d3c; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
 /* This is for all the base or body styles */
 body {
   background: #4d1104;
@@ -64,3 +58,16 @@ body {
       cursor: pointer; }
       .sidebar .volcanoes .listing img {
         align-self: center; }
+
+.gm-style-iw {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: #fcf9c2;
+  background-color: #3c0b04;
+  align-content: center;
+  padding: 1%;
+  font-weight: 600;
+  border: 1px solid #0c0404;
+  box-shadow: 1px 2px 1px #0c0404;
+  cursor: pointer; }
