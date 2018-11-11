@@ -78,7 +78,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App" aria-role="Application">
+      <div className="App" aria-label="Map of Volcanoes" role="Application">
         <Sidebar {...this.state} clickListing={this.clickListing} />
         <Map {...this.state} clickMarker={this.clickMarker} />
       </div>

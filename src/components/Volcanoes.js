@@ -5,7 +5,7 @@ import Listing from "./Listing";
 export default class Volcanoes extends Component {
   render() {
     return (
-      <ol className="volcanoes" aria-role="List of items">
+      <ol className="volcanoes" aria-label="List of places" role="menu">
         {this.props.venues &&
           this.props.venues.map((venue, index) => (
             <Listing
