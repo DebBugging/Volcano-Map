@@ -3,13 +3,18 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    color: $font-color;
-    background-color: $secondary-color;
+    color: $secondary-color;
+    background-color: $font-color;
+    text-shadow: 0 1px .5px $secondary-color; 
     align-content: center;
     padding: 1%;
-    font-weight: 600;
     border: 1px solid $border-color;
     box-shadow: 1px 2px 1px $border-color;
     cursor: pointer;
+
+    img {
+      border: 1px solid $border-color;
+      box-shadow: 1px 2px 1px $border-color;
+    }
   }
 }
