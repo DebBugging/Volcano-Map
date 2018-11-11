@@ -7,10 +7,9 @@
   display: flex;
   flex-flow: row nowrap; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gm-style .gm-style-iw {
   display: flex;
+<<<<<<< HEAD
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -26,6 +25,41 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif; }
+||||||| merged common ancestors
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; }
+
+.App-link {
+  color: #e96d3c; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+/* This is for all the base or body styles */
+body {
+  background: #4d1104;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+=======
+  justify-content: space-between;
+  width: 100%;
+  color: #fcf9c2;
+  background: #3c0b04;
+  align-content: center;
+  margin: 7% 20% 0 0;
+  padding: 1%;
+  font-size: 1rem;
+  border: 1px solid #0c0404;
+  box-shadow: 1px 2px 1px #0c0404;
+  cursor: pointer; }
+>>>>>>> 976ccd7df6ac4ad2247260a0450a89c4bdd5bcef
 
 .sidebar {
   width: 25%;
@@ -58,6 +92,7 @@ body {
       cursor: pointer; }
       .sidebar .volcanoes .listing img {
         align-self: center; }
+<<<<<<< HEAD
 
 .gm-style-iw {
   display: flex;
@@ -71,3 +106,13 @@ body {
   border: 1px solid #0c0404;
   box-shadow: 1px 2px 1px #0c0404;
   cursor: pointer; }
+||||||| merged common ancestors
+=======
+
+/* This is for all the base or body styles */
+body {
+  background: #4d1104;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+>>>>>>> 976ccd7df6ac4ad2247260a0450a89c4bdd5bcef
