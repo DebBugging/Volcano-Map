@@ -6,6 +6,7 @@ export default class Listing extends Component {
       <li
         aria-label="Filtered place"
         role="menuitem"
+        tabIndex="4"
         className="listing"
         onClick={() => this.props.clickListing(this.props)}
       >

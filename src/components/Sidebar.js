@@ -43,24 +43,12 @@ export default class Sidebar extends Component {
   };
 
   render() {
-    return (
-      <div className="sidebar" aria-label="Search sidebar" role="directory">
+    return <div className="sidebar" aria-label="Search sidebar" role="directory" tabIndex="1">
         <header role="banner">
           <h1>Volcanoes of Central Costa Rica</h1>
         </header>
-        <input
-          aria-label="search text field"
-          type={"search"}
-          id={"search"}
-          placeholder={"Search"}
-          onChange={this.handleSearch}
-        />
-        <Volcanoes
-          {...this.props}
-          venues={this.filterSearch()}
-          clickListing={this.props.clickListing}
-        />
-      </div>
-    );
+        <input aria-label="search text field" tabIndex="2" type={"search"} id={"search"} placeholder={"Search"} onChange={this.handleSearch} />
+        <Volcanoes {...this.props} venues={this.filterSearch()} clickListing={this.props.clickListing} />
+      </div>;
   }
 }

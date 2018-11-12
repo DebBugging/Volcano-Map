@@ -5,7 +5,12 @@ import Listing from "./Listing";
 export default class Volcanoes extends Component {
   render() {
     return (
-      <ol className="volcanoes" aria-label="List of places" role="menu">
+      <ol
+        className="volcanoes"
+        aria-label="List of places"
+        role="menu"
+        tabIndex="3"
+      >
         {this.props.venues &&
           this.props.venues.map((venue, index) => (
             <Listing
