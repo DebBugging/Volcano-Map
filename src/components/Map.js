@@ -60,6 +60,14 @@ const MyMapComponent = withScriptjs(
 );
 
 export default class Map extends Component {
+  //Check for loading errors
+  componentDidMount() {
+    window.gm_authFailure = () => {
+      alert("So sorry! But it seems there is a loading error.");
+      console.log("So sorry! But it seems there is a loading error.");
+    };
+  }
+
   render() {
     return (
       <MyMapComponent
